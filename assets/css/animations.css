@@ -1,0 +1,153 @@
+:root {
+    --black : #141414;
+    --white: #fafafa;
+    --orange: #FA3C08;
+    --gray: #848484;
+}
+
+@keyframes lineSkills {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.line-animate {
+    animation-name: lineSkills;
+    animation-duration: 3s;
+    width: 100%;
+}
+
+.animate-boxes {
+    animation: fade 2s;
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+
+.navbar-info .link {
+    position: relative;
+    z-index: 99;
+}
+
+.navbar-info .link::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: var(--orange);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+/* NAVBAR */
+
+.navbar-info .link:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.navbar-info .link:hover {
+    color: var(--orange);
+    transition: all .3s ease-in-out;
+}
+
+/* ABOUT */
+.about-social i:hover {
+    color: var(--orange);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.about-paragraph a:hover {
+    color: var(--gray);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* SKILLS */
+
+.skills-info .tools span:hover {
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    transition: all .3s ease-in-out;
+    cursor: pointer;    
+    color: var(--white);
+
+} 
+
+.certification:hover > .text {
+    text-decoration: underline;
+}
+
+.technologies {
+    padding: 30px 100px;
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+}
+
+.technologies .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-icons a:hover {
+    color: var(--orange);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.right:hover {
+    cursor: pointer;
+}
+
+.right:hover > .fa-arrow-right {
+    color: var(--orange);
+    transition: all .3s ease-in-out;
+}
+
+.social .item:hover {
+    cursor: pointer;
+}
+
+.social .item:hover > span {
+    background-color: var(--orange);
+    transition: all .3s ease-in-out;
+}
+
+.visibility {
+    opacity: 1;
+}
