@@ -324,7 +324,7 @@ main section {
 }
 
 .project .left .img {
-  height: 200px;
+  width: 400px;
   display: flex;
 }
 
